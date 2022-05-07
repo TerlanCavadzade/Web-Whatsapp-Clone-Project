@@ -22,7 +22,7 @@ for (let message of qrup) {
         this.children[2].classList.remove("notread")
     })
 }
-
+/*
 let mesaj = [
     {
         name: "me",
@@ -62,7 +62,7 @@ else {
     para.appendChild(textnode);
     node.appendChild(para);
     document.getElementById("messagebox").appendChild(node);
-}
+}*/
 document.querySelector("#searchbutton").addEventListener("click", function () {
     document.querySelector("#searchinput").focus()
 })
