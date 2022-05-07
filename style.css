@@ -1,0 +1,358 @@
+body {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+#left {
+  position: relative;
+  height: 100vh;
+  width: 421px;
+  display: flex;
+  flex-direction: column;
+
+  border-right: #c7c7c7 0.5px solid;
+}
+#left #person {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ededed;
+  align-items: center;
+  justify-content: space-between;
+  border-right: #c7c7c7 1px solid;
+  z-index: 1;
+}
+#photo {
+  margin: 0 15px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-image: url(./image/pic07.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#other {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+#status,
+#message,
+#setting {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#status:active,
+#message:active,
+#setting:active {
+  background-color: #c7c7c7;
+  transition: 0.2s;
+}
+#search {
+  width: 100%;
+  height: 50px;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+}
+#search #inpt {
+  position: relative;
+  margin: 0 15px;
+  background-color: white;
+  width: 93%;
+  height: 34px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#search #inpt button {
+  background-color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+#search #inpt input {
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 34px;
+  width: 100%;
+}
+#inp {
+  left: 15%;
+  position: absolute;
+  width: 75%;
+}
+#lg {
+  margin: 0 5px;
+  position: absolute;
+  width: 10%;
+}
+#msg {
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  height: 84vh;
+  overflow-x: hidden;
+}
+#msg #group {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px 0;
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu,
+    Cantarell, Fira Sans, sans-serif;
+  cursor: pointer;
+}
+#msg #group #img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#msg #group #img img {
+  width: 100%;
+  height: 100%;
+}
+#mesaj {
+  margin: 0 15px;
+  font-size: 14px;
+  color: #999999;
+}
+#mesaj div:nth-child(1) {
+  font-size: 19px;
+  color: black;
+}
+#tarix {
+  position: absolute;
+  font-size: 12px;
+  right: 45px;
+  top: 19px;
+  color: #999999;
+}
+#group.active {
+  background-color: #ebebeb;
+}
+#mesaj.active {
+  color: black;
+}
+#mesaj {
+  line-height: 1.5;
+}
+#mesaj.notread {
+  font-weight: 600;
+  color: black;
+}
+#tarix.notread {
+  color: black;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+}
+#right {
+  position: relative;
+  height: 100vh;
+  width: calc(100% - 422px);
+  display: flex;
+  flex-direction: column;
+}
+#top {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ededed;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+#sekil {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 20px;
+}
+#sekil img {
+  width: 100%;
+  height: 100%;
+}
+#ad {
+  font-family: Segoe UI, Helvetica Neue, Helvetica, Lucida Grande, Arial, Ubuntu,
+    Cantarell, Fira Sans, sans-serif;
+  font-size: 17px;
+}
+#top div {
+  display: flex;
+  flex-direction: row;
+}
+#ad {
+  display: flex;
+  align-items: center;
+}
+#top div:nth-child(2) {
+  margin-right: 10px;
+}
+#top div:nth-child(2) #srch {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#top div:nth-child(2) #opt {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#srch:active,
+#opt:active {
+  background-color: #c7c7c7;
+}
+#inform {
+  font-size: 12px;
+  margin-top: 2px;
+  color: #999;
+}
+#messagebox {
+  height: 82vh;
+  background-color: rgb(247, 247, 247);
+  background-position: center;
+  background-size: cover;
+  overflow-y: scroll;
+}
+#msgcontainer {
+  box-sizing: border-box;
+  display: flex;
+}
+.message {
+  position: relative;
+  background-color: white;
+  box-sizing: content-box;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 400px;
+}
+#me::after {
+  content: "";
+  width: 11px;
+  height: 9px;
+  background-color: #dcf8c6;
+  position: absolute;
+  clip-path: polygon(20% 0%, 100% 0, 0 100%, 0 0);
+  left: 95%;
+  bottom: 76%;
+}
+#him::after {
+  content: "";
+  width: 11px;
+  height: 9px;
+  background-color: white;
+  position: absolute;
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0 0);
+  right: 95%;
+  bottom: 75%;
+}
+.me {
+  position: absolute;
+  right: 20px;
+  margin-top: 50%;
+}
+.him {
+  position: absolute;
+  left: 20px;
+  margin-top: 45%;
+}
+#me {
+  background-color: #dcf8c6;
+}
+
+#write {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f0f0f0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+#file {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 15px;
+}
+#file div:nth-child(2) {
+  margin-left: 15px;
+}
+#file div {
+  cursor: pointer;
+}
+#txt {
+  width: calc(100% - 180px);
+  margin: 0 20px;
+  height: 36px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 36px;
+}
+#write input {
+  padding-left: 10px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+#sent button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+body {
+  overflow: hidden;
+}
