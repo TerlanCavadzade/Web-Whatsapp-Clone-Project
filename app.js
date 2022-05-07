@@ -32,14 +32,6 @@ let mesaj = [
         name: "him",
         message: "salam"
     },
-    {
-        name: "me",
-        message: "necesen"
-    },
-    {
-        name: "him",
-        message: "Yaxsi"
-    }
 ]
 margin = 10
 //for (let msg of mesaj.reverse()) {
